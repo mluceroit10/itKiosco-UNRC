@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE jdo SYSTEM "file:/javax/jdo/jdo.dtd">
+
+<jdo>
+   <package name="server.persistencia.dominio">
+      <class name="PlanillaES" identity-type="datastore">
+
+        <field name="id" />      
+        <field name="nroPlanilla" />
+        <field name="fechaP" />
+        <field name="ingresoCajaDiaria" />
+        <field name="saldoCajaDiaria" />
+        <field name="saldoCajaGeneral" />
+        <field name = "movimientosCaja">
+      	  <collection element-type = "MovimientoCaja">
+      	    <extension vendor-name= "triactive" key ="owner-field" value="planilla" />
+      	  </collection>
+        </field>
+        <field name = "facturas">
+      	  <collection element-type = "FacturaCliente">
+      	    <extension vendor-name= "triactive" key ="owner-field" value="planilla" />
+      	  </collection>
+        </field>
+        <field name = "usuariosTrab">
+      	  <collection element-type = "UsuarioPlanillaES">
+      	    <extension vendor-name= "triactive" key ="owner-field" value="planillaES" />
+      	  </collection>
+        </field>
+        <field name="periodo"> 
+		  <extension vendor-name="triactive" key="length" value="max 255"/> 
+		</field>
+		 <field name="retiro" />
+		 <field name="enCaja" />
+      </class>
+   </package>
+</jdo>
+	
+	

@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<!DOCTYPE jasperReport
+  PUBLIC "-//JasperReports//DTD Report Design//EN"
+  "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+  
+  <jasperReport name="CierreDeCaja"
+                pageWidth="595"
+                pageHeight="842"
+                columnWidth="515"
+                columnSpacing="0"
+                leftMargin="40"
+                rightMargin="20"
+                topMargin="30"
+                bottomMargin="30">
+  
+    <reportFont name="Arial_Normal" isDefault="true" fontName="Arial" size="12" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+    <reportFont name="Arial_Bold" isDefault="false" fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+    <reportFont name="Arial_Italic" isDefault="false" fontName="Arial" size="12" isItalic="true" pdfFontName="Helvetica-Oblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+    <reportFont name="Arial_Titulo" isDefault="false" fontName="Arial" size="14" isBold="true" isItalic="true" pdfFontName="Helvetica-Oblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+    <parameter name="NroPlanilla" class="java.lang.String"/>
+    <parameter name="Fecha" class="java.lang.String"/>
+    <parameter name="SaldoCajaDiaria" class="java.lang.String"/>
+    <parameter name="TotalEntradasCDiaria" class="java.lang.String"/>
+    <parameter name="TotalSalidasCDiaria" class="java.lang.String"/>
+    <parameter name="TotalCajaDiaria" class="java.lang.String"/>
+    <parameter name="Institucion" class="java.lang.String"/>
+    <parameter name="DineroRetira" class="java.lang.String"/>
+    <parameter name="DineroCaja" class="java.lang.String"/>
+    <field name="Becario" class="java.lang.String"/>
+
+    <pageHeader>
+        <band height="100">
+            <textField isBlankWhenNull="true">
+                <reportElement x="10" y="0" width="500" height="20"/>
+                <textElement textAlignment="Center" lineSpacing="Single">
+                    <font reportFont="Arial_Titulo"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">$P{Institucion}</textFieldExpression>
+            </textField>
+            <rectangle>
+                <reportElement x="10" y="30" width="150" height="30" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="160" y="30" width="100" height="30" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="260" y="30" width="150" height="30" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="410" y="30" width="100" height="30" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="10" y="35" width="150" height="20" />
+                <textElement textAlignment="Center" lineSpacing="Single">
+                    <font reportFont="Arial_Bold"/>
+                </textElement>
+                <text>CIERRE DE CAJA</text>
+            </staticText>
+            <textField isBlankWhenNull="true">
+                <reportElement x="160" y="35" width="100" height="20"/>
+                <textElement textAlignment="Center" lineSpacing="Single">
+                    <font reportFont="Arial_Bold"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">"Nº "+$P{NroPlanilla}</textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="260" y="35" width="150" height="20" />
+                <textElement textAlignment="Center" lineSpacing="Single">
+                    <font reportFont="Arial_Bold"/>
+                </textElement>
+                <text>Fecha y Hora:</text>
+            </staticText>
+            <textField isBlankWhenNull="true">
+                <reportElement x="410" y="35" width="100" height="20"/>
+                <textElement textAlignment="Center" lineSpacing="Single">
+                    <font reportFont="Arial_Bold"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">$P{Fecha}</textFieldExpression>
+            </textField>
+            <rectangle>
+                <reportElement x="10" y="80" width="500" height="20" forecolor="#331100" backcolor="#e8e8e8"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="10" y="83" width="500" height="15" />
+                <textElement textAlignment="Center" lineSpacing="Single">
+                    <font reportFont="Arial_Normal"/>
+                </textElement>
+                <text>USUARIOS RESPONSABLES</text>
+            </staticText>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="0"/>
+    </columnHeader>
+    <detail>
+        <band height="20">
+            <textField isStretchWithOverflow="true">
+                <reportElement x="10" y="2" width="500" height="15"/>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression class="java.lang.String">$F{Becario}</textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <summary>
+        <band height="250">
+            <rectangle>
+                <reportElement x="10" y="20" width="380" height="20" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="10" y="40" width="300" height="20" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="310" y="40" width="80" height="20" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="10" y="60" width="300" height="20" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="310" y="60" width="80" height="20" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="10" y="80" width="300" height="20" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="310" y="80" width="80" height="20" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="10" y="100" width="300" height="20" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="310" y="100" width="80" height="20" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="10" y="120" width="300" height="20" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="310" y="120" width="80" height="20" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="10" y="140" width="300" height="20" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="310" y="140" width="80" height="20" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="10" y="25" width="380" height="15" />
+                <textElement textAlignment="Center" lineSpacing="Single">
+                    <font reportFont="Arial_Bold"/>
+                </textElement>
+                <text>CAJA DIARIA</text>
+            </staticText>
+            <staticText>
+                <reportElement x="10" y="45" width="290" height="15" />
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_Normal"/>
+                </textElement>
+                <text>Dinero en caja: </text>
+            </staticText>
+            <textField isBlankWhenNull="true">
+                <reportElement x="315" y="45" width="70" height="15"/>
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_Normal"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">$P{SaldoCajaDiaria}</textFieldExpression>
+            </textField>  
+            <staticText>
+                <reportElement x="10" y="65" width="290" height="15" />
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_Normal"/>
+                </textElement>
+                <text>Total de Entradas: </text>
+            </staticText>
+            <textField isBlankWhenNull="true">
+                <reportElement x="315" y="65" width="70" height="15"/>
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_Normal"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">$P{TotalEntradasCDiaria}</textFieldExpression>
+            </textField>  
+            <staticText>
+                <reportElement x="10" y="85" width="290" height="15" />
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_Normal"/>
+                </textElement>
+                <text>Total de Salidas: </text>
+            </staticText>
+            <textField isBlankWhenNull="true">
+                <reportElement x="315" y="85" width="70" height="15"/>
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_Normal"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">$P{TotalSalidasCDiaria}</textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="10" y="105" width="290" height="15" />
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_Bold"/>
+                </textElement>
+                <text>Total Caja Diaria: </text>
+            </staticText>
+            <textField isBlankWhenNull="true">
+                <reportElement x="315" y="105" width="70" height="15"/>
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_Bold"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">$P{TotalCajaDiaria}</textFieldExpression>
+            </textField>
+           <staticText>
+                <reportElement x="10" y="125" width="290" height="15" />
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_Normal"/>
+                </textElement>
+                <text>Dinero retirado: </text>
+            </staticText>
+            <textField isBlankWhenNull="true">
+                <reportElement x="315" y="125" width="70" height="15"/>
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_Bold"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">$P{DineroRetira}</textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="10" y="145" width="290" height="15" />
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_Normal"/>
+                </textElement>
+                <text>Dinero en caja: </text>
+            </staticText>
+            <textField isBlankWhenNull="true">
+                <reportElement x="315" y="145" width="70" height="15"/>
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_Bold"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">$P{DineroCaja}</textFieldExpression>
+            </textField>
+        </band>
+    </summary>
+</jasperReport>

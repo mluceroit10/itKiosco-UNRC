@@ -1,0 +1,1 @@
+C:/mysql/bin/MYSQLDUMP.EXE --opt --password= --user=root softkioscodb jdo_table oid provincia localidad kiosco proveedor usuario producto planilla_es factura factura_cliente factura_proveedor item_factura movimiento_caja usuario_planilla_es sesion beca_asignada >D:/desarrollos/it10-versionado/itKiosco/archivosSoftKiosco/backup/backupBD_13-mar-2015_hr_19-14-11.SQL

@@ -1,0 +1,19 @@
+alter table factura
+add column PERIODO varchar(255) binary default NULL;
+
+alter table movimiento_caja
+add column PERIODO varchar(255) binary default NULL;
+
+alter table planilla_es
+add column PERIODO varchar(255) binary default NULL,
+add column EN_CAJA double NOT NULL default 0,
+add column RETIRO double NOT NULL default 0;
+
+alter table usuario
+add column ELIMINADO tinyint(1) NOT NULL default '0';
+
+alter table producto
+add column ELIMINADO tinyint(1) NOT NULL default '0';
+
+alter table proveedor
+add column ELIMINADO tinyint(1) NOT NULL default '0';

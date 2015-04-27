@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<!DOCTYPE jasperReport
+  PUBLIC "-//JasperReports//DTD Report Design//EN"
+  "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+  
+  <jasperReport name="ComprobanteCliente"
+                pageWidth="594"
+                pageHeight="840"
+                columnWidth="515"
+                columnSpacing="0"
+                leftMargin="20"
+                rightMargin="20"
+                topMargin="20"
+                bottomMargin="30">
+                
+    <reportFont name="Arial_Normal" isDefault="true" fontName="Arial" size="10" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+    <reportFont name="Arial_Negrita_14" isDefault="false" fontName="Arial" size="14" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+    <reportFont name="Arial_12" isDefault="false" fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+    <reportFont name="Arial_11" isDefault="false" fontName="Arial" size="11" isBold="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+    <reportFont name="Arial_Titulo" isDefault="false" fontName="Arial" size="14" isBold="true" isItalic="true" pdfFontName="Helvetica-Oblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+    <parameter name="nroCompr" class="java.lang.String"/>
+    <parameter name="FechaCompr" class="java.lang.String"/>
+    <parameter name="Institucion" class="java.lang.String"/>
+    <parameter name="InstEncargado" class="java.lang.String"/>
+    <parameter name="InstDomicilio" class="java.lang.String"/>
+    <parameter name="InstTel" class="java.lang.String"/>
+    <parameter name="aCuentaDe" class="java.lang.String"/>
+    <parameter name="TotalCompr" class="java.lang.String"/>
+    <field name="Cant" class="java.lang.String"/>
+    <field name="Producto" class="java.lang.String"/>
+    <field name="PUnit" class="java.lang.String"/>
+    <field name="PTotal" class="java.lang.String"/>
+
+    <pageHeader>
+        <band height="220">
+            <rectangle>
+                <reportElement x="0" y="0" width="554" height="110" forecolor="#331100" />
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <textField isBlankWhenNull="true">
+                <reportElement x="10" y="10" width="530" height="20"/>
+                <textElement textAlignment="Center" lineSpacing="Single">
+                    <font reportFont="Arial_Titulo"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">$P{Institucion}</textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="10" y="35" width="530" height="18"/>
+                <textElement textAlignment="Center" lineSpacing="Single">
+                    <font reportFont="Arial_12"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">"Encargado: "+$P{InstEncargado}</textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="10" y="55" width="530" height="18"/>
+                <textElement textAlignment="Center" lineSpacing="Single">
+                    <font reportFont="Arial_12"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">$P{InstDomicilio}</textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="10" y="75" width="530" height="14"/>
+                <textElement textAlignment="Center" lineSpacing="Single">
+                    <font reportFont="Arial_11"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">$P{InstTel}</textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="340" y="90" width="200" height="20" />
+                <textElement textAlignment="Left" lineSpacing="Single">
+                    <font fontName="Arial" size="9" isBold="false" />
+                </textElement>
+                <text>DOCUMENTO NO VALIDO COMO FACTURA</text>
+            </staticText>
+            <rectangle>
+                <reportElement x="0" y="110" width="554" height="85" forecolor="#331100" />
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <textField isBlankWhenNull="true">
+                <reportElement x="10" y="115" width="270" height="15"/>
+                <textElement textAlignment="Left" lineSpacing="Single">
+                    <font reportFont="Arial_12"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">"Comprobante Nº: "+$P{nroCompr}</textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="10" y="135" width="270" height="15"/>
+                <textElement textAlignment="Left" lineSpacing="Single">
+                    <font reportFont="Arial_12"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">"Fecha: "+$P{FechaCompr}</textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="10" y="155" width="540" height="15"/>
+                <textElement textAlignment="Left" lineSpacing="Single">
+                    <font reportFont="Arial_12"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">$P{aCuentaDe}</textFieldExpression>
+            </textField>
+            <rectangle>
+                <reportElement x="0" y="200" width="554" height="20" forecolor="#331100" />
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="10" y="202" width="50" height="15" />
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_11"/>
+                </textElement>
+                <text>CANT.</text>
+            </staticText>
+            <staticText>
+                <reportElement x="70" y="202" width="340" height="15" />
+                <textElement textAlignment="Center" lineSpacing="Single">
+                    <font reportFont="Arial_11"/>
+                </textElement>
+                <text>DESCRIPCION</text>
+            </staticText>
+            <staticText>
+                <reportElement x="420" y="202" width="60" height="15" />
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_11"/>
+                </textElement>
+                <text>P. UNIT.</text>
+            </staticText>
+            <staticText>
+                <reportElement x="490" y="202" width="60" height="15" />
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_11"/>
+                </textElement>
+                <text>IMPORTE</text>
+            </staticText>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="0"/>
+    </columnHeader>
+    <detail>
+        <band height="18">
+            <textField>
+                <reportElement x="10" y="2" width="50" height="16"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression class="java.lang.String">$F{Cant}</textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement x="70" y="2" width="340" height="16" />
+                <textElement textAlignment="Left"/>
+                <textFieldExpression class="java.lang.String">$F{Producto}</textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement x="420" y="2" width="60" height="16" positionType="Float"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression class="java.lang.String">$F{PUnit}</textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement x="490" y="2" width="60" height="16" positionType="Float"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression class="java.lang.String">$F{PTotal}</textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <summary>
+        <band height="40">
+            <line>
+                <reportElement x="0" y="0" width="554" height="0"/>
+                <graphicElement stretchType="NoStretch"/>
+            </line>
+            <rectangle>
+                <reportElement x="390" y="0" width="90" height="30" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="480" y="0" width="74" height="30" forecolor="#331100" backcolor="#ffffff"/>
+                <graphicElement stretchType="NoStretch"/>
+            </rectangle>
+            <textField isBlankWhenNull="true">
+                <reportElement x="395" y="5" width="80" height="20"/>
+                <textElement textAlignment="Left" lineSpacing="Single">
+                    <font reportFont="Arial_Negrita_14" />
+                </textElement>
+                <textFieldExpression class="java.lang.String">"Total $"</textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="490" y="5" width="60" height="20"/>
+                <textElement textAlignment="Right" lineSpacing="Single">
+                    <font reportFont="Arial_Negrita_14" />
+                </textElement>
+                <textFieldExpression class="java.lang.String">$P{TotalCompr}</textFieldExpression>
+            </textField>
+        </band>
+    </summary>
+</jasperReport>

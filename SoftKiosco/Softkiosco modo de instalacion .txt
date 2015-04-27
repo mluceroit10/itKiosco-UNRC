@@ -1,0 +1,46 @@
+Pasos para instalar y dejar funcionando correctamente el sistema informático "CHUPALETA"
+
+1 - Instalar MySql 
+	- Instalar el mysqladmin (Instalar Primero): se debe descomprimir y ejecutar el archivo setup.exe. instalar en "c:\mysql" 
+	- Instalar el mysql Control Center (Instalar Segundo): ejecutar el archivo setup.exe 
+		
+	- Posteriormente se debe ingresar en la carpeta c:\mysql\bin y ejecutar el archivo winmysqladmin.exe 
+		esto activa la bocina y debe estarse ejecutando siempre.
+	- Posteriormente ingresar al mysql Control Center y configurarlo con los siguientes datos
+		hostname: localhost
+		user name: root
+
+2 - Verificar la existencia y número de versión de Java (puede ser 5 o 6).
+	Ingresar a Simbolos de sistema y escribir lo siguiente:
+           java -version.
+	El sistema desarrollado solo admite la version Java(TM) SE Runtime Environment 1.5 o 1.6 
+    De no existir, el CD proporciona en la carpeta "Instaladores/Java" el instalador de la Maquina Virtual "jre-6u25-windows-i586.exe".
+
+	
+	En versiones anteriores/posteriores existen inconvenientes para la impresion de archivos.
+
+3 - Instalar el SoftKiosco
+	Instalacion en la maquina servidor:
+		- ejecutar el archivo InstaladorSoftKiosco-Chupaleta.exe
+		- ejecutar C:\SoftKiosco\crearBaseDatos.bat para crear e inicializar la base de datos,
+			(el servidor de BD debe estar conectado)
+			
+	Instalacion en maquina solo cliente:
+		- ejecutar el archivo Instalador_Cliente_SoftKiosco-Chupaleta.exe
+
+	En ambas instalaciones se debe:
+		- Configurar el archivo conf.ini en ambas maquinas se debe colocar la direccion ip del servidor 
+			Se deben editar las siguientes lineas
+				host= 192.168.1.1
+				url_db=jdbc:mysql://192.168.1.1:3306/softkioscodb
+			Y en el valor maquina debe ir servidor o cliente respectivamente
+			
+
+4 - Ejecución
+	Ejecutar primero el Servidor.
+		desde menu de programas: SOFT KIOSCO - CHUPALETA\SoftKiosco_Servidor
+		desde acceso directo de escritorio: \SoftKiosco_Chupaleta_Servidor
+
+	Ejecutar despues el Cliente.
+		desde menu de programas: SOFT KIOSCO - CHUPALETA\SoftKiosco_Cliente
+		desde acceso directo de escritorio: \SoftKiosco_Chupaleta_Cliente

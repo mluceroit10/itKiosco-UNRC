@@ -1,0 +1,32 @@
+
+echo Generando stubs y skels...
+
+cd classes
+
+C:\j2sdk1.4.1_02\bin\rmic -vcompat -classpath "D:\desarrollos\it10\itKiosco\SoftKiosco\classes;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo2.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori-enhancer.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\tjdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\log4j-1.2.8.jar" -d D:\desarrollos\it10\itKiosco\SoftKiosco\classes server.GestionarFacturaCliente.ControlFacturaCliente
+
+C:\j2sdk1.4.1_02\bin\rmic -vcompat -classpath "D:\desarrollos\it10\itKiosco\SoftKiosco\classes;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo2.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori-enhancer.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\tjdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\log4j-1.2.8.jar" -d D:\desarrollos\it10\itKiosco\SoftKiosco\classes server.GestionarFacturaProveedor.ControlFacturaProveedor
+
+C:\j2sdk1.4.1_02\bin\rmic -vcompat -classpath "D:\desarrollos\it10\itKiosco\SoftKiosco\classes;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo2.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori-enhancer.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\tjdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\log4j-1.2.8.jar" -d D:\desarrollos\it10\itKiosco\SoftKiosco\classes server.GestionarKiosco.ControlKiosco
+
+C:\j2sdk1.4.1_02\bin\rmic -vcompat -classpath "D:\desarrollos\it10\itKiosco\SoftKiosco\classes;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo2.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori-enhancer.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\tjdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\log4j-1.2.8.jar" -d D:\desarrollos\it10\itKiosco\SoftKiosco\classes server.GestionarLocalidad.ControlLocalidad
+
+C:\j2sdk1.4.1_02\bin\rmic -vcompat -classpath "D:\desarrollos\it10\itKiosco\SoftKiosco\classes;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo2.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori-enhancer.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\tjdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\log4j-1.2.8.jar" -d D:\desarrollos\it10\itKiosco\SoftKiosco\classes server.GestionarMovimientoCaja.ControlMovimientoCaja
+
+C:\j2sdk1.4.1_02\bin\rmic -vcompat -classpath "D:\desarrollos\it10\itKiosco\SoftKiosco\classes;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo2.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori-enhancer.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\tjdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\log4j-1.2.8.jar" -d D:\desarrollos\it10\itKiosco\SoftKiosco\classes server.GestionarProducto.ControlProducto
+
+C:\j2sdk1.4.1_02\bin\rmic -vcompat -classpath "D:\desarrollos\it10\itKiosco\SoftKiosco\classes;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo2.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori-enhancer.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\tjdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\log4j-1.2.8.jar" -d D:\desarrollos\it10\itKiosco\SoftKiosco\classes server.GestionarProvincia.ControlProvincia
+
+C:\j2sdk1.4.1_02\bin\rmic -vcompat -classpath "D:\desarrollos\it10\itKiosco\SoftKiosco\classes;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo2.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori-enhancer.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\tjdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\log4j-1.2.8.jar" -d D:\desarrollos\it10\itKiosco\SoftKiosco\classes server.GestionarProveedor.ControlProveedor
+
+C:\j2sdk1.4.1_02\bin\rmic -vcompat -classpath "D:\desarrollos\it10\itKiosco\SoftKiosco\classes;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo2.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori-enhancer.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\tjdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\log4j-1.2.8.jar" -d D:\desarrollos\it10\itKiosco\SoftKiosco\classes server.GestionarBecaAsignada.ControlBecaAsignada
+
+C:\j2sdk1.4.1_02\bin\rmic -vcompat -classpath "D:\desarrollos\it10\itKiosco\SoftKiosco\classes;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo2.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori-enhancer.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\tjdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\log4j-1.2.8.jar" -d D:\desarrollos\it10\itKiosco\SoftKiosco\classes server.GestionarSesion.ControlSesion
+
+C:\j2sdk1.4.1_02\bin\rmic -vcompat -classpath "D:\desarrollos\it10\itKiosco\SoftKiosco\classes;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo2.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori-enhancer.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\tjdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\log4j-1.2.8.jar" -d D:\desarrollos\it10\itKiosco\SoftKiosco\classes server.GestionarUsuario.ControlUsuario
+
+C:\j2sdk1.4.1_02\bin\rmic -vcompat -classpath "D:\desarrollos\it10\itKiosco\SoftKiosco\classes;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdo2.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\jdori-enhancer.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\tjdo.jar;D:\desarrollos\it10\itKiosco\SoftKiosco\lib\log4j-1.2.8.jar" -d D:\desarrollos\it10\itKiosco\SoftKiosco\classes server.RealizarPlanillaES.ControlRealizarPlanillaES
+
+   ;;
+
+pause

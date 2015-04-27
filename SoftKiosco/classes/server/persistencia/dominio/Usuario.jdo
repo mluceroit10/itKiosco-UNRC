@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE jdo SYSTEM "file:/javax/jdo/jdo.dtd">
+
+<jdo>
+   <package name="server.persistencia.dominio">
+      <class name="Usuario" identity-type="datastore"> 
+	
+        <field name="id" />
+        <field name="dni" /> 
+        <field name="apellido"> 
+          <extension vendor-name="triactive" key="length" value="max 255"/> 
+        </field>	
+        <field name="nombre"> 
+          <extension vendor-name="triactive" key="length" value="max 255"/> 
+        </field>	
+        <field name="telefono"> 
+          <extension vendor-name="triactive" key="length" value="max 255"/> 
+        </field>	
+        <field name="direccion"> 
+          <extension vendor-name="triactive" key="length" value="max 255"/> 
+        </field>	
+        <field name = "localidad" persistence-modifier="persistent">
+      	  <extension vendor-name="triactive" key="collection-field" />
+        </field>
+        <field name="tipoUsuario"> 
+          <extension vendor-name="triactive" key="length" value="max 255"/> 
+        </field>
+        <field name="nombUsuario"> 
+	       <extension vendor-name="triactive" key="length" value="max 255"/> 
+        </field>	
+        <field name="contrasenia"> 
+          <extension vendor-name="triactive" key="length" value="max 255"/> 
+        </field>	
+	    <field name="importeBeca" />
+        <field name = "becas">
+      	  <collection element-type = "BecaAsignada">
+      	    <extension vendor-name= "triactive" key ="owner-field" value="usuario"/>
+      	  </collection>
+        </field>
+        <field name="eliminado" />  
+     </class>
+  </package>
+</jdo>	

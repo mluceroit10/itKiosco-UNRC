@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE jdo SYSTEM "file:/javax/jdo/jdo.dtd">
+
+<jdo>
+   <package name="server.persistencia.dominio">
+      <class name="Factura" identity-type="datastore">
+
+        <field name="id" />
+        <field name="nroFactura" />
+        <field name = "items">
+      	  <collection element-type = "ItemFactura">
+      	    <extension vendor-name= "triactive" key ="owner-field" value="factura"/>
+      	  </collection>
+        </field>
+        <field name="tipoFactura">
+   	    <extension vendor-name="triactive" key="length" value="max 255"/>
+        </field>
+        <field name="importeTotal" />
+        <field name="fechaHora" />
+        <field name="periodo"> 
+		  <extension vendor-name="triactive" key="length" value="max 255"/> 
+		</field>
+      </class>
+   </package>
+</jdo>	

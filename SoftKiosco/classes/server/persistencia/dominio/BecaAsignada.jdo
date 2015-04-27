@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE jdo SYSTEM "file:/javax/jdo/jdo.dtd">
+
+<jdo>
+   <package name="server.persistencia.dominio">
+      <class name="BecaAsignada" identity-type="datastore">
+
+        <field name="id" />
+        <field name="fecha" />
+        <field name="cierrePlazo" />
+        <field name="importeAsignado" />
+        <field name="importeRestante" />
+        <field name="usuario" persistence-modifier="persistent">
+      	  <extension vendor-name="triactive" key="collection-field" value="becas"/>
+        </field>
+
+      </class>
+   </package>
+</jdo>
+	
+	
